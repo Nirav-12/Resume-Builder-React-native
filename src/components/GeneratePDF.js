@@ -1,7 +1,4 @@
-import { shareAsync } from "expo-sharing";
-import * as Print from "expo-print";
-
-export const generatePDF = async (resumeData) => {
+export const generatePDF = (resumeData) => {
   const htmlContent = `
     <html>
       <head>
@@ -100,7 +97,5 @@ export const generatePDF = async (resumeData) => {
       </body>
     </html>
   `;
-  // return htmlContent;
-  const { uri } = await Print.printToFileAsync({ html: htmlContent });
-  await shareAsync(uri, { UTI: ".pdf", mimeType: "application/pdf" });
+  return htmlContent;
 };

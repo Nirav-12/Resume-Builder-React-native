@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ScrollView, StyleSheet, Button } from "react-native";
+import { ScrollView, StyleSheet, Button, View } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 import ExperienceInput from "../components/ExperienceInput";
 import EducationInput from "../components/EducationInput";
@@ -112,6 +112,7 @@ const App = ({ navigation }) => {
         skills={skills}
       />
       <Button title="Preview" onPress={handleSubmit} />
+      <View style={{ height: 50 }} />
     </ScrollView>
   );
 };
