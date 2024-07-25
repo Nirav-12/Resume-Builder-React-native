@@ -100,7 +100,7 @@ export const generatePDF = async (resumeData) => {
       </body>
     </html>
   `;
-
+  // return htmlContent;
   const { uri } = await Print.printToFileAsync({ html: htmlContent });
   await shareAsync(uri, { UTI: ".pdf", mimeType: "application/pdf" });
 };

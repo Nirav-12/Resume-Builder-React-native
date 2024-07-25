@@ -112,7 +112,6 @@ const App = ({ navigation }) => {
         skills={skills}
       />
       <Button title="Preview" onPress={handleSubmit} />
-      <Button title="Generate PDF" onPress={handleGeneratePDF} />
     </ScrollView>
   );
 };
